@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images - Southern African History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fce2b6;
+            color: #3a2b1d;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #d87c3a;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        nav {
+            background-color: #fddca8;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 3px solid #d87c3a;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3a2b1d;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 30px 0 10px;
+            color: #3a2b1d;
+            font-size: 28px;
+        }
+
+        p {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 0 20px 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .button {
+            display: block;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: #f4f4f4;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e2c799;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/him.png" alt="Website Logo">
+        </a>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="articles.html">Articles</a> |
+        <a href="images.html">Images</a> |
+        <a href="books.html">Books</a> |
+        <a href="quotes.html">Quotes</a> |
+        <a href="dictionary.html">Dictionary</a>
+    </nav>
+    <hr>
+
+    <h2>Historical Images</h2>
+    <p>Explore a collection of images depicting key moments in Southern African history.</p>
+
+    <div class="container">
+        <a href="ndebele.html" class="button">Ndebele</a>
+        <a href="shona.html" class="button">Shona</a>
+        <a href="sesotho.html" class="button">Sesotho</a>
+        <a href="zulu.html" class="button">Zulu</a>
+        <a href="xhosa.html" class="button">Xhosa</a>
+        <a href="eswatini.html" class="button">Eswatini</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Insight of Southern African History</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fce2b6;
+      color: #3a2b1d;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #d87c3a;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #2c1a0f;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #fddca8;
+      padding: 10px 0;
+      text-align: center;
+      border-bottom: 3px solid #d87c3a;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #3a2b1d;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #fce2b6;
+    }
+
+    .search-bar form {
+      display: inline-block;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 8px;
+      border: 1px solid #d87c3a;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      background-color: #d87c3a;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 30px 0 10px;
+      color: #3a2b1d;
+      font-size: 28px;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px 40px;
+      position: relative;
+      z-index: 1; /* Make sure content is above spears */
+      background: rgba(252, 226, 182, 0.9); /* Slightly opaque background for readability */
+      border-radius: 8px;
+    }
+
+    h3 {
+      color: #5c3c1c;
+      text-decoration: underline;
+      margin-top: 30px;
+    }
+
+    /* === Falling Spear Animation Styles === */
+    .falling-spears {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0; /* Behind all content */
+      overflow: hidden;
+    }
+
+    .spear {
+      position: absolute;
+      width: 60px;
+      animation: fall linear infinite;
+      opacity: 0.1;
+      user-select: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+
+    .typing-text {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #3a2b1d;
+  display: inline-block;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Falling Spears Animation -->
+  <div class="falling-spears">
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 5%; animation-duration: 9s; animation-delay: 0s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 15%; animation-duration: 10s; animation-delay: 2s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 25%; animation-duration: 11s; animation-delay: 4s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 35%; animation-duration: 8s; animation-delay: 1s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 45%; animation-duration: 12s; animation-delay: 3s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 55%; animation-duration: 10s; animation-delay: 5s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 65%; animation-duration: 9s; animation-delay: 2s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 75%; animation-duration: 13s; animation-delay: 4s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 85%; animation-duration: 11s; animation-delay: 0s;"
+      alt="Spear"
+    />
+    <img
+      class="spear"
+      src="spear.png"
+      style="left: 95%; animation-duration: 14s; animation-delay: 1s;"
+      alt="Spear"
+    />
+  </div>
+
+  <header>
+    <img src="img/him.png" alt="Website Logo" />
+    <div class="header-title">
+      <h1><u>THE RICH HISTORY OF THE SOUTHERN AFRICANS</u></h1>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="images.html">Images</a>
+    <a href="books.html">Books</a>
+    <a href="quotes.html">Quotes</a>
+    <a href="dictionary.html">Dictionary</a>
+  </nav>
+
+  <div class="search-bar">
+    <form action="search.html" method="get">
+      <input type="text" name="query" placeholder="Search Anything" />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+ <h2 id="animated-heading" class="typing-text"></h2>
+  <div class="content">
+    <p>
+      Southern Africa is home to diverse and vibrant cultures, each with a unique
+      history, language, and traditions that have shaped the region. This website
+      explores six prominent tribes and their impact on Southern African history.
+    </p>
+
+    <h3>Ndebele</h3>
+    <p>
+      The Ndebele are known for the stunning wall paintings and intricate beadwork
+      that display their unique architecture. They were brave fighters during the
+      latter part of the 19th century when they tried to resist colonial control.
+      Culturally, a great amount of focus is given to the rites of passage,
+      especially for adolescent boys and girls. Ndebele belongs to the Nguni
+      languages group, being sister languages to Zulu and Xhosa. The Ndebele people
+      continue to preserve their heritage today by women through artistic symbols
+      and designs, which are already world renowned. The women make bold geometric
+      designs which are widely accepted as a representation of African creativity
+      and identity.
+    </p>
+
+    <h3>Xhosa</h3>
+    <p>
+      One of the ethnolinguistic groups in South Africa is the Xhosa. They are
+      famous for their music, oral traditions, and the use of clicks in their
+      languages. They have historically resisted European expansion into South
+      Africa, such as during the Cape Frontier Wars. Xhosa society is also organized
+      into a very powerful clan system with each person belonging to a ‘great house
+      or a dynasty’. Young men undergo an important cultural procedure called
+      Ulwaluko which signifies the transition to adulthood. Nelson Mandela, like
+      many others, is an example of a Xhosa who rose to prominence during the fight
+      against Apartheid South Africa.
+    </p>
+
+    <h3>Shona</h3>
+    <p>
+      The Shona are the largest ethnic group of Zimbabwe and are famous for their
+      historical association with the ancient kingdom of Great Zimbabwe, the
+      greatest of African civilizations. This kingdom flourished from the 11th to
+      the 15th century, having left behind magnificent stone ruins that stand firmly
+      even today. The Shona unwaveringly embrace a strong spiritual tradition
+      revolving around ancestor-worship, from which spirit mediums derive
+      importance and serve as liaisons for the communities they represent. They are
+      also famous for sculpture works in soapstone, carving human and animal figures
+      that hold enormous cultural significance. The language of the Shona people is
+      widely spoken in Zimbabwe and parts of Mozambique.
+    </p>
+
+    <h3>Zulu</h3>
+    <p>
+      The Zulu people, South Africa’s largest ethnic group, are well known for their
+      warrior history, particularly under the leadership of King Shaka Zulu in the
+      early 19th century. Shaka revolutionized warfare in Southern Africa by
+      introducing new military tactics, including the "buffalo horn" formation. Zulu
+      society is deeply rooted in traditions such as the Umemulo (coming-of-age
+      ceremony) and the Reed Dance, which celebrates young women’s purity and
+      readiness for marriage. The Zulu language is one of South Africa’s official
+      languages, and their cultural influence is seen in music, dance, and beadwork.
+      Despite modernization, the Zulu maintain strong ties to their heritage and
+      celebrate it through festivals and traditional dress.
+    </p>
+
+    <h3>Sesotho</h3>
+    <p>
+      The people of Sesotho, known as Basotho, are the founding ethnic group of
+      Lesotho, which is a mountainous kingdom of Southern Africa. They are
+      identifiable by the famous Basotho blankets that are worn. The significance of
+      the cloth goes beyond being just another piece of clothing; it is indicative
+      of national pride and identity. Historically, in the 19th century, their
+      leader, King Moshoeshoe I, pulled together several clans to forge resistance
+      against external Zulu and Boer threats. The Sotho language is spoken throughout
+      Lesotho and South Africa. Typical values of the Sesotho culture include
+      story-telling, cattle herding, close communal ties, and so on. One of the
+      major events in celebration of Sesotho heritage is the Morija Arts and
+      Cultural Festival. This is an annual event heralding the showcasing of poetry,
+      music, and traditional dances.
+    </p>
+
+    <h3>Eswatini (Swazi)</h3>
+    <p>
+      The Swazi people living primarily in Eswatini (formerly Swaziland) have one of
+      the last remaining absolute monarchies in Africa. Society revolves around the
+      royal family; governed by a king (Ngwenyama) and queen mother (Ndlovukati), in
+      cultural and political life. The Swazi are renowned for Umhlanga (Reed Dance)
+      in which thousands of young women present reeds to the queen mother in honor
+      of respect and unity. Yet another crucial event is the Incwala (First Fruits
+      Ceremony), celebrating the start of the harvest season. Eswatini has maintained
+      many traditions amid modernization, making it one of the most culturally
+      intact societies in Africa.
+    </p>
+  </div>
+
+  <footer
+    style="
+      background-color: #d87c3a;
+      color: #2c1a0f;
+      text-align: center;
+      padding: 20px;
+      border-top: 3px solid #3a2b1d;
+    "
+  >
+    <p>&copy; 2025 The Rich History of the Southern Africans. All rights reserved.</p>
+    <p>
+      <a href="contact.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;">Contact</a>
+      |
+      <a href="about.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;"
+        >Student Number : <b>40107355</b></a
+      >
+      |
+      <a href="Refferences.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;"
+        >Refferences</a
+      >
+    </p>
+  </footer>
+<script>
+  const headingText = "Discover the Rich History of Southern Africa";
+  const headingEl = document.getElementById("animated-heading");
+  let i = 0;
+  let isDeleting = false;
+
+  function loopTyping() {
+    headingEl.textContent = headingText.slice(0, i);
+
+    if (!isDeleting) {
+      if (i < headingText.length) {
+        i++;
+      } else {
+        isDeleting = true;
+        setTimeout(loopTyping, 1500); // hold full text before deleting
+        return;
+      }
+    } else {
+      if (i > 0) {
+        i--;
+      } else {
+        isDeleting = false;
+      }
+    }
+
+    setTimeout(loopTyping, isDeleting ? 40 : 70);
+  }
+
+  document.addEventListener("DOMContentLoaded", loopTyping);
+</script>
+
+</body>
+</html>
+

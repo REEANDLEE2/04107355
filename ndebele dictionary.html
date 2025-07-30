@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ndebele Dictionary</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fce2b6;
+      color: #3a2b1d;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #d87c3a;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Spear slide animation */
+    @keyframes spear-slide {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    header img {
+      height: 40px;
+      margin-right: 10px;
+      animation: spear-slide 1.5s ease-out forwards;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #2c1a0f;
+      font-weight: bold;
+      margin: 0;
+      text-decoration: underline;
+    }
+
+    nav {
+      background-color: #fddca8;
+      padding: 10px 0;
+      text-align: center;
+      border-bottom: 3px solid #d87c3a;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #3a2b1d;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #a14a00;
+    }
+
+    .dictionary-content {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #3a2b1d;
+    }
+
+    .section-header p {
+      font-size: 1em;
+      color: #5c4b3a;
+    }
+
+    /* Fade-in animation for the table */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fddca8;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      border: 2px solid #3a2b1d;
+      border-radius: 12px;
+      overflow: hidden;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    th, td {
+      border: 1px solid #3a2b1d;
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #d87c3a;
+      color: white;
+      font-size: 1.1em;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ffe6b3;
+    }
+
+    tr:hover {
+      background-color: #ffd480;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fddca8;
+      border-top: 3px solid #d87c3a;
+      color: #5c4b3a;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header h1 {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 5px 8px;
+        display: inline-block;
+      }
+
+      .section-header h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="him.png" alt="Africa Icon" />
+    <h1>THE RICH HISTORY OF THE SOUTHERN AFRICANS</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="articles.html">Articles</a> |
+    <a href="images.html">Images</a> |
+    <a href="books.html">Books</a> |
+    <a href="quotes.html">Quotes</a> |
+    <a href="dictionary.html">Dictionary</a>
+  </nav>
+
+  <div class="dictionary-content">
+    <div class="section-header">
+      <h2>Ndebele Dictionary</h2>
+      <p>Explore 10 basic Ndebele words and their English meanings.</p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ndebele Word</th>
+          <th>English Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Umuntu</td><td>Person</td></tr>
+        <tr><td>Indlu</td><td>House</td></tr>
+        <tr><td>Isikole</td><td>School</td></tr>
+        <tr><td>Umsebenzi</td><td>Work / Job</td></tr>
+        <tr><td>Imoto</td><td>Car</td></tr>
+        <tr><td>Umtwana</td><td>Child</td></tr>
+        <tr><td>Inja</td><td>Dog</td></tr>
+        <tr><td>Ikati</td><td>Cat</td></tr>
+        <tr><td>Umfula</td><td>River</td></tr>
+        <tr><td>Izulu</td><td>Sky / Weather</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+   <footer style="background-color: #d87c3a; color: #2c1a0f; text-align: center; padding: 20px; border-top: 3px solid #3a2b1d;">
+        <p>&copy; 2025 The Rich History of the Southern Africans. All rights reserved.</p>
+        <p>
+            <a href="contact.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;">Contact</a> |
+            <a href="about.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;">Student Number : <b>40107355</B></a>    | 
+            <a href="Refferences.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;">Refferences</a>
+        </p>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>The Shona People - History and Culture | Southern African Heritage</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fce2b6;
+      color: #3a2b1d;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #d87c3a;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+      overflow: visible;
+    }
+
+    .egg-container {
+      position: relative;
+      width: 100px;
+      height: 120px;
+      margin: auto;
+      animation: crack 6s ease-in-out forwards;
+    }
+
+    .egg-shell {
+      width: 100px;
+      height: 120px;
+      background: radial-gradient(ellipse at center, #fff4dd 0%, #fddca8 100%);
+      border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      animation: splitShell 6s ease-in-out forwards;
+    }
+
+    .logo {
+      position: absolute;
+      top: 40px;
+      left: 25px;
+      width: 50px;
+      opacity: 0;
+      animation: logoPop 6s ease-in-out forwards;
+      z-index: 2;
+    }
+
+    @keyframes crack {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes splitShell {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(10deg); }
+      100% { transform: translateY(-60px) rotate(20deg); opacity: 0; }
+    }
+
+    @keyframes logoPop {
+      0% { opacity: 0; transform: translateY(20px) scale(0.8); }
+      60% { opacity: 1; transform: translateY(-10px) scale(1.05); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    nav {
+      background-color: #fddca8;
+      padding: 10px 0;
+      text-align: center;
+      border-bottom: 3px solid #d87c3a;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #3a2b1d;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #a14a00;
+    }
+
+    main.content {
+      position: relative;
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff4dd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(58, 43, 29, 0.2);
+      overflow: hidden;
+    }
+
+    h2 {
+      text-align: center;
+      color: #3a2b1d;
+      font-size: 28px;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* SPEAR ANIMATION STYLES */
+    .falling-spears {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .spear {
+      position: absolute;
+      width: 30px;
+      animation: fallSpear 5s linear infinite;
+      opacity: 0.9;
+    }
+
+    .spear:nth-child(1) { left: 5%; animation-delay: 0s; }
+    .spear:nth-child(2) { left: 15%; animation-delay: 1s; }
+    .spear:nth-child(3) { left: 25%; animation-delay: 2s; }
+    .spear:nth-child(4) { left: 35%; animation-delay: 0.5s; }
+    .spear:nth-child(5) { left: 45%; animation-delay: 1.2s; }
+    .spear:nth-child(6) { left: 55%; animation-delay: 2.5s; }
+    .spear:nth-child(7) { left: 65%; animation-delay: 1.7s; }
+    .spear:nth-child(8) { left: 75%; animation-delay: 0.3s; }
+    .spear:nth-child(9) { left: 85%; animation-delay: 2.1s; }
+    .spear:nth-child(10) { left: 95%; animation-delay: 1.1s; }
+
+    @keyframes fallSpear {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(1000px) rotate(180deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="egg-container">
+      <div class="egg-shell"></div>
+      <img class="logo" src="him.png" alt="Website Logo">
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="articles.html">Articles</a> |
+    <a href="images.html">Images</a> |
+    <a href="books.html">Books</a> |
+    <a href="quotes.html">Quotes</a> |
+    <a href="dictionary.html">Dictionary</a>
+  </nav>
+
+  <main class="content">
+    <div class="falling-spears">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+      <img class="spear" src="spear.png" alt="Spear">
+    </div>
+
+    <h2>Shona History</h2>
+     <p>The Shona people make up the largest ethnic community in Zimbabwe and comprise over 70% of the total population. They pride themselves on an immense cultural heritage, rich spiritual life, and history stretching back over a millennium. At center stage in their historical narrative is the Kingdom of Great Zimbabwe, one of the most remarkable civilizations in precolonial Africa. From early Bantu migrations to cultural affiliations through the southern African plateau, the Shona's story is one of innovation, adaptation, and an enduring legacy.</p>
+
+    <p><strong>I. Origins and Early Settlement c. 1000–1500 AD</strong></p>
+    <p>The Shona people trace their ancestry to the Bantu migrations that started about 1000 BC. Due to a combination of climatic changes, population pressures, and the search for arable land, such vast movements of people across Sub-Saharan Africa had taken place. In Zimbabwe today, Bantu-speaking groups began a settlement after 1000 AD. The Shona of Zimbabwe trace their ancestry through the southern reaches of Buchwa, present-day Zimbabwe, into southern Mozambique and northern South Africa with their earliest settlers.</p>
+    <p>These early settlers brought with them the hallmarks of Bantu culture: ironworking, agriculture, livestock herding, and complex social organization. The highveld plateau between the Zambezi and Limpopo Rivers provided fertile land and moderate climate for farming. This served as the basis for the establishment of permanent settlements—these settlements that matured into more complex ones in later centuries.</p>
+    <p>Shona early communities were generally small clan-centered settlements located in fertile plains and near water sources. They grew mainly millet and sorghum and later started cultivating maize for surplus food to sustain larger populations with social stratification. The grazing of cattle acted as a food source and a physical manifestation of wealth and socio-political rituals, such as marriage.</p>
+    <p>The use of iron tools introduced another dimension toward the enhancement of agricultural operations in preparing land for large-scale agriculture. The villages eventually developed into towns, with leaders—usually elders or rainmakers—starting to wield centralized authority. This provided a socio-political basis for consolidated states such as Great Zimbabwe.</p>
+
+    <p><strong>II. Rise of Great Zimbabwe (c. 1100–1450 AD)</strong></p>
+    <p>Great Zimbabwe is the monument to Shona civilization par excellence. It lies in southeastern Zimbabwe and is built of local granite, with the stone walls, rising to 11 meters high, standing erected without mortar. The name Zimbabwe is derived from the Shona Dzimba dza mabwe, "houses of stone."</p>
+    <p>The site comprises three principal areas: The Hill Complex, the Great Enclosure, and the Valley Ruins. At its height, Great Zimbabwe is estimated to have supported a population of up to 20,000, hence one of the largest cities in sub-Saharan precolonial Africa.</p>
+    <p>Great Zimbabwe's wealth was based on agriculture, cattle keeping, and extensive trading. It controlled the trade routes that exported gold and ivory from the interior to the Indian Ocean coast. The trading port of Sofala was a Swahili-supported commercial center located in present-day Mozambique.</p>
+    <p>Chinese porcelain, Persian glass, and Indian textiles found in archaeological ruins suggest that the citizens of Great Zimbabwe were part of a transcontinental network. The kingdom was ruled by the Mambo, a monarch with both secular and spiritual powers. The mhondoro (lion spirits) were said to be ancestral spirits of the land and were contacted by spirit mediums (svikiro), who would thereafter advise kings and solve disputes.</p>
+
+    <p><strong>III. Fragmentation and Successor States (c. 1450–1800 AD)</strong></p>
+    <p>By the mid-15th century, Great Zimbabwe was in decline. Scholars speculate this decline was due to environmental degradation, overpopulation, depletion of nearby resources, and trade dynamics shifting. Successor states such as the Mutapa Kingdom and the Rozvi Empire carried forward Shona political, economic, and spiritual traditions, extending influence across southern Africa.</p>
+
+    <p><strong>IV. Cultural Identity and Social Structure</strong></p>
+    <p>The Shona social fabric is based on the clan system, with totems (mutupo) regulating marriage and identity. Their spiritual worldview revolves around a triadic cosmology—Mwari (the supreme being), the vadzimu (ancestors), and svikiro (spirit mediums). Artistic expression—particularly stone sculpture and the mbira music tradition—has become an enduring feature of their cultural identity.</p>
+
+    <p><strong>V. Colonial Encounters (1800s–1980)</strong></p>
+    <p>The 19th and 20th centuries brought colonial intervention, land dispossession, and cultural suppression. Resistance came through revolts like the First Chimurenga (1896–97) led by Nehanda and Kaguvi. Cultural survival took place through syncretism, underground practices, and eventual reassertion in nationalist movements.</p>
+
+    <p><strong>VI. The Nationalist Movement and Independence (1900–1980)</strong></p>
+    <p>In the 1960s and 70s, the Second Chimurenga launched a guerrilla war against colonial rule, drawing on traditional symbols and practices. Independence was achieved in 1980 under Robert Mugabe. Shona culture became central to national identity with renewed emphasis on language, ritual, and history.</p>
+
+    <p><strong>VII. Shona Society Today</strong></p>
+    <p>Shona language and culture remain vibrant, with standardization of dialects and growing global diaspora. Urbanization, economic challenges, and emigration pose new cultural dynamics, but heritage preservation—through music, sculpture, and ancestral remembrance—continues to thrive both locally and globally.</p>
+
+    <p><strong>VIII. Conclusion: Legacy and Continuity</strong></p>
+    <p>The Shona represent a civilization marked by resilience, cultural richness, and enduring spiritual traditions. From stone monuments and sacred rituals to global artistic acclaim, the Shona legacy remains a pillar of Zimbabwean identity and a symbol of African heritage across the world.</p>
+
+
+  </main>
+<footer style="background-color: #d87c3a; color: #2c1a0f; text-align: center; padding: 20px; border-top: 3px solid #3a2b1d;">
+        <p>&copy; 2025 The Rich History of the Southern Africans. All rights reserved.</p>
+        <p>
+            <a href="contact.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;">Contact</a> |
+            <a href="about.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;">Student Number : <b>40107355</B></a>    | 
+            <a href="Refferences.html" style="color: #2c1a0f; text-decoration: none; font-weight: bold;">Refferences</a>
+        </p>
+    </footer>
+
+</body>
+</html>

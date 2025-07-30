@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Results - Southern African History</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fce2b6;
+      color: #3a2b1d;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #d87c3a;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #2c1a0f;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #fddca8;
+      padding: 10px 0;
+      text-align: center;
+      border-bottom: 3px solid #d87c3a;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #3a2b1d;
+      font-weight: bold;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #3a2b1d;
+    }
+
+    .result {
+      background-color: #fff8e7;
+      border: 1px solid #d87c3a;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .result a {
+      font-weight: bold;
+      color: #5c3c1c;
+      text-decoration: none;
+    }
+
+    .result a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/him.png" alt="Website Logo" />
+    <h1><u>SEARCH RESULTS</u></h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="articles.html">Articles</a>
+    <a href="images.html">Images</a>
+    <a href="books.html">Books</a>
+    <a href="quotes.html">Quotes</a>
+    <a href="dictionary.html">Dictionary</a>
+  </nav>
+
+  <div class="content">
+    <h2>Results for: <span id="searchQuery">Loading...</span></h2>
+    <div id="resultsContainer"></div>
+  </div>
+
+  <footer style="background-color: #d87c3a; color: #2c1a0f; text-align: center; padding: 20px; border-top: 3px solid #3a2b1d;">
+    <p>&copy; 2025 The Rich History of the Southern Africans. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const data = [
+      {
+        title: "Shona People",
+        link: "articles.html#Shona",
+        content: "The Shona are known for Great Zimbabwe, ancestor worship, and soapstone carvings."
+      },
+      {
+        title: "Zulu Kingdom",
+        link: "articles.html#Zulu",
+        content: "Led by Shaka Zulu, known for military tactics like the buffalo horn formation."
+      },
+      {
+        title: "Xhosa Culture",
+        link: "articles.html#Xhosa",
+        content: "Xhosa are known for ulwaluko, oral traditions, and being part of the anti-apartheid struggle."
+      },
+      {
+        title: "Sesotho and Lesotho",
+        link: "articles.html#Sesotho",
+        content: "The Basotho are mountain people famous for their blankets and resistance under Moshoeshoe I."
+      },
+      {
+        title: "Ndebele Art",
+        link: "articles.html#Ndebele",
+        content: "Ndebele are known for their bold geometric wall paintings and beadwork."
+      },
+      {
+        title: "Swazi Kingdom",
+        link: "articles.html#Eswatini",
+        content: "Eswatini maintains traditional ceremonies like Umhlanga and Incwala."
+      }
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query') || '';
+    const resultsContainer = document.getElementById('resultsContainer');
+    const searchQueryDisplay = document.getElementById('searchQuery');
+    searchQueryDisplay.textContent = query;
+
+    function searchContent(query) {
+      const results = data.filter(item =>
+        item.title.toLowerCase().includes(query.toLowerCase()) ||
+        item.content.toLowerCase().includes(query.toLowerCase())
+      );
+
+      if (results.length === 0) {
+        resultsContainer.innerHTML = "<p>No results found.</p>";
+        return;
+      }
+
+      resultsContainer.innerHTML = results.map(result => `
+        <div class="result">
+          <a href="${result.link}">${result.title}</a>
+          <p>${result.content}</p>
+        </div>
+      `).join('');
+    }
+
+    searchContent(query);
+  </script>
+</body>
+</html>

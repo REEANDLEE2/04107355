@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ndebele - Southern African History</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fce2b6;
+      color: #3a2b1d;
+      margin: 0;
+    }
+
+    header {
+      background-color: #d87c3a;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+
+    .egg-container {
+      position: relative;
+      width: 100px;
+      height: 120px;
+      margin: auto;
+      animation: crack 6s ease-in-out forwards;
+    }
+
+    .egg-shell {
+      width: 100px;
+      height: 120px;
+      background: radial-gradient(ellipse at center, #fff4dd 0%, #fddca8 100%);
+      border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      animation: splitShell 6s ease-in-out forwards;
+    }
+
+    .logo {
+      position: absolute;
+      top: 40px;
+      left: 25px;
+      width: 50px;
+      opacity: 0;
+      animation: logoPop 6s ease-in-out forwards;
+      z-index: 2;
+    }
+
+    @keyframes crack {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes splitShell {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(10deg); }
+      100% { transform: translateY(-60px) rotate(20deg); opacity: 0; }
+    }
+
+    @keyframes logoPop {
+      0% { opacity: 0; transform: translateY(20px) scale(0.8); }
+      60% { opacity: 1; transform: translateY(-10px) scale(1.05); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    nav {
+      background-color: #fddca8;
+      padding: 10px 0;
+      text-align: center;
+      border-bottom: 3px solid #d87c3a;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #3a2b1d;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #a14a00;
+    }
+
+    .content {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff4dd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(58, 43, 29, 0.2);
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: #3a2b1d;
+    }
+
+    h2 {
+      font-size: 28px;
+      text-decoration: underline;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-top: 30px;
+      text-decoration: underline;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    hr {
+      border: none;
+      height: 3px;
+      background-color: #d87c3a;
+      margin: 0;
+    }
+
+    footer {
+      background-color: #d87c3a;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+
+    footer nav {
+      background-color: transparent;
+      border: none;
+      padding: 10px 0 5px;
+    }
+
+    footer nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="egg-container">
+      <div class="egg-shell"></div>
+      <img class="logo" src="him.png" alt="Website Logo">
+    </div>
+  </header>
+  <hr>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="articles.html">Articles</a> |
+    <a href="images.html">Images</a> |
+    <a href="books.html">Books</a> |
+    <a href="quotes.html">Quotes</a> |
+    <a href="dictionary.html">Dictionary</a>
+  </nav>
+
+  <div class="content">
+    <h2>History of the Ndebele People</h2>
+    <p>The Ndebele people, also known as the Matabele, are a Bantu ethnic group in Southern Africa. Their origins trace back to the early 19th century when a group of Zulu warriors led by Mzilikazi Khumalo broke away from Shaka Zulu and migrated northwards into present-day Zimbabwe. The migration, known as the Mfecane, was marked by upheaval and conflict, which led to the establishment of the Ndebele kingdom.</p>
+
+    <h3>Formation of the Ndebele Kingdom</h3>
+    <p>Under Mzilikazi's leadership, the Ndebele established a powerful kingdom in southwestern Zimbabwe. He skillfully united various ethnic groups under his rule through military prowess and strategic alliances. The capital was established at Bulawayo, which means "the place of slaughter." The Ndebele adopted a centralized system of governance with a strong military orientation, influenced heavily by Zulu traditions.</p>
+
+    <h3>Society and Culture</h3>
+    <p>The Ndebele society was militaristic and hierarchical. Young men were organized into regiments (amabutho) and underwent rigorous training. The society also had a clear division of roles, with the king and his advisors holding the highest authority. The Ndebele are known for their vibrant culture, which includes colorful mural art, intricate beadwork, and ceremonial dances. These cultural expressions continue to be a source of pride and identity for the Ndebele people today.</p>
+
+    <h3>Colonial Resistance and Legacy</h3>
+    <p>In the late 19th century, the Ndebele came into conflict with British colonial forces during the First and Second Matabele Wars (1893–1897). Despite their valiant resistance, the kingdom was eventually conquered, and the Ndebele were incorporated into the British colony of Southern Rhodesia. Nevertheless, their legacy of resistance, unity, and cultural richness endures in modern Zimbabwe.</p>
+  </div>
+
+  <footer>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="articles.html">Articles</a> |
+      <a href="images.html">Images</a> |
+      <a href="books.html">Books</a> |
+      <a href="quotes.html">Quotes</a> |
+      <a href="dictionary.html">Dictionary</a>
+    </nav>
+    <div>&copy; 2025 Southern African History Project. All rights reserved.</div>
+  </footer>
+</body>
+</html>
